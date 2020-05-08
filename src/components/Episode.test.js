@@ -3,7 +3,9 @@ import { render, queryByTestId } from '@testing-library/react';
 import Episodes from './Episodes';
 
 
-test("Episodes are rendered correctly", () => {
+// Test written to make sure render order is correct //
+
+test("Episodes are in the correct place", () => {
     const {queryAllByTestId} = 
         render(<Episodes episodes={[
             {
@@ -29,6 +31,8 @@ test("Episodes are rendered correctly", () => {
     expect(episodeNumberElements[1]).toHaveTextContent("Season 1, Episode 2");
 
 }); 
+
+// Test written to 
 
 test("Renders with no errors", () => {
     const {queryByTestId} = 
