@@ -12,17 +12,15 @@ test("Episodes are in the correct place", () => {
                 id: 1,
                 season: 1,
                 number: 1,
-                name: "A new beginning",
-                summary: "The first episode",
-                runtime: 40
+                name: "",
+                summary: "",
             },
             {
                 id: 2,
                 season: 1,
                 number: 2,
-                name: "The plot thickens",
-                summary: "Things are getting interesting",
-                runtime: 40
+                name: "",
+                summary: "",
             }
         ]} />);
     const episodeNumberElements = queryAllByTestId(/episode-number-id/i);
@@ -32,9 +30,9 @@ test("Episodes are in the correct place", () => {
 
 }); 
 
-// Test written to 
+// Test written to fail if there is no data //
 
-test("Renders with no errors", () => {
+test("Renders with data", () => {
     const {queryByTestId} = 
         render(<Episodes episodes={[]} />);
     const element = queryByTestId(/episodes-id/i);
